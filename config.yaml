@@ -29,7 +29,7 @@ output:
 runtime:
   # Shared cache: download on the login node, then reuse from compute nodes.
   # Checkpoints never enter this repository.
-  model_cache_dir: /cluster/scratch/$USER/video-generation/huggingface
+  model_cache_dir: /cluster/scratch/nsoldati/video-generation/huggingface
   # Compute nodes have no outbound Hugging Face access.
   local_files_only: true
   # true disables CPU offloading from the individual model configs.
