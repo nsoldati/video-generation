@@ -1,0 +1,21 @@
+model:
+  name: hunyuan-video
+  adapter: hunyuan_video
+  checkpoint: hunyuanvideo-community/HunyuanVideo
+  dtype: bfloat16
+
+generation:
+  width: 512
+  height: 320
+  num_frames: 61
+  fps: 15
+  num_inference_steps: 30
+  guidance_scale: 6.0
+  negative_prompt: "blurry, low quality, distorted, static, watermark"
+  parameters: {}
+
+runtime:
+  output_dir: outputs
+  offload: model
+  vae_tiling: true
+  overwrite: false

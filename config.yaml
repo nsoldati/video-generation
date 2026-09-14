@@ -1,0 +1,36 @@
+# Models run sequentially in this order. Toggle enabled to select them.
+models:
+  - config: configs/wan.yaml
+    enabled: true
+  - config: configs/hunyuan_video.yaml
+    enabled: false
+  - config: configs/cogvideox.yaml
+    enabled: false
+  - config: configs/ltx_video.yaml
+    enabled: false
+  - config: configs/ltx2.yaml
+    enabled: false
+
+prompts:
+  path: prompts.json
+  # null selects every prompt in the dataset.
+  count: null
+
+# Generates seeds [start, start + count). For example, this makes 0, 1, and 2.
+seeds:
+  start: 0
+  count: 1
+
+output:
+  root_dir: /cluster/scratch/nsoldati/generated-videos
+  videos_dir: videos
+  manifest: manifest.csv
+
+runtime:
+  # Shared cache: download on the login node, then reuse from compute nodes.
+  # Checkpoints never enter this repository.
+  model_cache_dir: /cluster/scratch/$USER/video-generation/huggingface
+  # Compute nodes have no outbound Hugging Face access.
+  local_files_only: true
+  # true disables CPU offloading from the individual model configs.
+  load_to_vram: true

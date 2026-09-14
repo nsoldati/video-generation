@@ -1,0 +1,29 @@
+model:
+  name: wan-2.1-t2v-1.3b
+  adapter: wan
+  checkpoint: Wan-AI/Wan2.1-T2V-1.3B-Diffusers
+  dtype: bfloat16
+  components:
+    vae:
+      class: diffusers.AutoencoderKLWan
+      dtype: float32
+      subfolder: vae
+
+generation:
+  width: 832
+  height: 480
+  num_frames: 81
+  fps: 16
+  num_inference_steps: 50
+  guidance_scale: 5.0
+  negative_prompt: "overexposed, static, blurry, low quality, subtitles, watermark, distorted anatomy"
+  parameters: {}
+
+runtime:
+  output_dir: outputs
+  offload: model
+  vae_tiling: true
+  vae_slicing: false
+  attention_slicing: false
+  torch_compile: false
+  overwrite: false

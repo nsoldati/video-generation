@@ -1,0 +1,35 @@
+[project]
+name = "video-bench"
+version = "0.1.0"
+description = "Generate reproducible text-to-video benchmark datasets with local Diffusers models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "accelerate>=1.2",
+    "av>=14.0",
+    "diffusers>=0.40.0,<0.41",
+    "imageio[ffmpeg]>=2.36",
+    "numpy>=1.26",
+    "pyyaml>=6.0",
+    "sentencepiece>=0.2",
+    "torch>=2.4",
+    "transformers>=4.48",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3"]
+
+[project.scripts]
+video-bench = "video_bench.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.uv.build-backend]
+module-name = "video_bench"
+module-root = "src"

@@ -1,0 +1,22 @@
+model:
+  name: ltx-2
+  adapter: ltx2
+  checkpoint: Lightricks/LTX-2
+  dtype: bfloat16
+
+generation:
+  width: 768
+  height: 512
+  num_frames: 121
+  fps: 24
+  num_inference_steps: 30
+  guidance_scale: 3.0
+  negative_prompt: "shaky, glitchy, low quality, distorted, motion artifacts, static"
+  parameters:
+    audio_guidance_scale: 7.0
+
+runtime:
+  output_dir: outputs
+  offload: sequential
+  vae_tiling: true
+  overwrite: false

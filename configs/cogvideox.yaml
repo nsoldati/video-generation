@@ -1,0 +1,22 @@
+model:
+  name: cogvideox-5b
+  adapter: cogvideox
+  checkpoint: THUDM/CogVideoX-5b
+  dtype: bfloat16
+
+generation:
+  width: 720
+  height: 480
+  num_frames: 49
+  fps: 8
+  num_inference_steps: 50
+  guidance_scale: 6.0
+  negative_prompt: "blurry, low quality, distorted, static, watermark"
+  parameters: {}
+
+runtime:
+  output_dir: outputs
+  offload: model
+  vae_tiling: true
+  vae_slicing: true
+  overwrite: false

@@ -1,0 +1,23 @@
+model:
+  name: ltx-video
+  adapter: ltx_video
+  checkpoint: Lightricks/LTX-Video
+  dtype: bfloat16
+
+generation:
+  width: 704
+  height: 480
+  num_frames: 161
+  fps: 24
+  num_inference_steps: 50
+  guidance_scale: 3.0
+  negative_prompt: "worst quality, inconsistent motion, blurry, jittery, distorted"
+  parameters:
+    decode_timestep: 0.03
+    decode_noise_scale: 0.025
+
+runtime:
+  output_dir: outputs
+  offload: model
+  vae_tiling: true
+  overwrite: false

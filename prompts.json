@@ -1,0 +1,1212 @@
+{
+  "dataset_name": "4DBench_100",
+  "version": "1.1",
+  "language": "en",
+  "intended_clip_duration_seconds": {
+    "min": 3,
+    "max": 5
+  },
+  "notes": "100 controlled prompts for short video generation and 4D-consistency evaluation. Every prompt specifies a single continuous photorealistic shot with no cuts, a target duration, a visually identifiable foreground protagonist, a feasible action sequence, a defined camera behavior, and an explicit persistence condition. Consistency focuses use a shared twelve-label taxonomy: subject_identity, articulated_motion, rigid_geometry, attached_object, occlusion_reappearance, camera_motion, viewpoint_change, depth_consistency, surface_contact, lighting_consistency, reflection_consistency, and environment_consistency.",
+  "prompts": [
+    {
+      "id": "4d_001",
+      "duration_seconds": 3,
+      "environment": "urban",
+      "protagonist": "young woman",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A young woman with short black hair, a bright red coat, and black boots strides left to right across a rain-slick city street and turns her head once toward the camera. A waist-high camera tracks beside her. Her face, coat, and proportions remain unchanged; neon reflections move consistently across the pavement.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_002",
+      "duration_seconds": 4,
+      "environment": "urban",
+      "protagonist": "cyclist",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A cyclist in a yellow helmet and blue jacket on a silver bicycle rides toward the camera through a cobblestone lane, then follows one left bend. The camera retreats at matching speed with the full bicycle visible. Rider, frame, and wheels retain their shape while the stone facades show stable parallax.",
+      "consistency_focus": [
+        "attached_object",
+        "viewpoint_change",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_003",
+      "duration_seconds": 5,
+      "environment": "urban",
+      "protagonist": "delivery robot",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A compact white delivery robot with six black wheels and a blue lid rolls along a sidewalk and turns right around one building corner. The camera arcs from its front-left to rear-left side. Its body, six wheels, and lid remain unchanged, with coherent reflections in the glass storefronts.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "camera_motion",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_004",
+      "duration_seconds": 4,
+      "environment": "urban",
+      "protagonist": "man with umbrella",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A man in a tan trench coat carrying an open black umbrella walks beneath an elevated railway and crosses once from daylight into deep shadow. A waist-high camera follows two meters behind. The same man and umbrella remain recognizable, with colors changing only according to the lighting.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_005",
+      "duration_seconds": 3,
+      "environment": "urban",
+      "protagonist": "skateboarder",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A skateboarder in a green hoodie, beige trousers, and white shoes completes one left-to-right carve across a concrete plaza. A low camera follows one meter behind. The rider, board, and four wheels remain unchanged, and both feet maintain believable contact.",
+      "consistency_focus": [
+        "articulated_motion",
+        "attached_object",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_006",
+      "duration_seconds": 5,
+      "environment": "urban",
+      "protagonist": "taxi",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A yellow four-door taxi with a black roof sign enters a downtown intersection from the left and completes one right turn. A stationary street-level camera pans right to keep it centered. Its body, doors, wheels, and sign retain identical geometry as reflections slide coherently across its windows.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "camera_motion",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_007",
+      "duration_seconds": 4,
+      "environment": "urban",
+      "protagonist": "runner",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A runner in an orange top, black shorts, and white shoes approaches along a riverside promenade, passes the camera on its left, and continues away. The camera pivots once to follow from behind. The runner's appearance and gait remain unchanged through frontal, side, and rear views; background depth remains stable.",
+      "consistency_focus": [
+        "subject_identity",
+        "viewpoint_change",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_008",
+      "duration_seconds": 4,
+      "environment": "urban",
+      "protagonist": "dog",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A black-and-white border collie wearing a red collar trots along a pedestrian street and passes behind one metal bollard. The camera tracks parallel at the dog's eye level. The dog reappears with the same markings, collar, shape, and gait while the cafe facades remain stable.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_009",
+      "duration_seconds": 5,
+      "environment": "urban",
+      "protagonist": "woman on scooter",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A woman in a white helmet and purple jacket on a black electric scooter rides through a mural-covered alley and follows one broad curve. The camera tracks parallel from her left at a fixed distance. Her face, clothing, scooter geometry, and hand and foot positions remain consistent while the same mural details persist.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_010",
+      "duration_seconds": 3,
+      "environment": "nature",
+      "protagonist": "hiker",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A hiker in a bright blue jacket, gray backpack, and red boots takes three uphill steps over a rocky alpine trail. The camera follows closely from behind at hip height. Hiker and backpack retain their shape, each boot contacts the stones, and the distant valley preserves stable depth.",
+      "consistency_focus": [
+        "articulated_motion",
+        "surface_contact",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_011",
+      "duration_seconds": 3,
+      "environment": "nature",
+      "protagonist": "deer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A brown deer with a white tail and small symmetrical antlers makes two bounds left to right across a forest clearing, briefly passing behind one tree trunk. A fixed camera pans right. The deer reappears with the same antlers, markings, proportions, and gait; the tree layout stays fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_012",
+      "duration_seconds": 4,
+      "environment": "nature",
+      "protagonist": "mountain biker",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A mountain biker in a red helmet and green jersey on a black bicycle descends toward the camera, rolls over one small bump, and passes on the right. The camera pivots once to follow. Rider, bicycle, and wheels remain unchanged, with tire contact maintained except for a brief lift over the bump.",
+      "consistency_focus": [
+        "attached_object",
+        "camera_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_013",
+      "duration_seconds": 5,
+      "environment": "nature",
+      "protagonist": "wolf",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A gray wolf with a white chest and dark-tipped tail walks along a snowy ridge and curves toward the camera around one rock. A fixed camera keeps it full-body. Its markings, face, tail, and proportions remain identical from profile to three-quarter view; distant peaks remain stable.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_014",
+      "duration_seconds": 4,
+      "environment": "nature",
+      "protagonist": "trail runner",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A trail runner in a yellow vest, black leggings, and blue backpack runs away from the camera across a narrow wooden footbridge. The camera advances directly behind at fixed height. The runner's appearance and gait remain unchanged while the bridge rails converge consistently toward the far end.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_015",
+      "duration_seconds": 3,
+      "environment": "nature",
+      "protagonist": "horse",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A chestnut horse with a white forehead blaze and black mane trots beside a misty lake, curving from profile toward three-quarter view. The camera makes a shallow counterclockwise arc. Its markings, mane, limbs, and proportions remain unchanged, with a coherent reflection in the calm water.",
+      "consistency_focus": [
+        "subject_identity",
+        "viewpoint_change",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_016",
+      "duration_seconds": 5,
+      "environment": "nature",
+      "protagonist": "brown bear",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A large brown bear with a lighter muzzle takes four steps left to right through a shallow clear stream. The camera tracks parallel from the bank. Its face, fur pattern, volume, and gait remain unchanged; each paw displaces water at contact while submerged stones stay fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_017",
+      "duration_seconds": 4,
+      "environment": "nature",
+      "protagonist": "fox",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A red fox with black lower legs and a white-tipped tail runs diagonally toward the camera, disappears behind one patch of tall grass, and reappears closer. The camera remains fixed. It returns with identical markings, face, tail, and proportions, following a smooth trajectory through the occlusion.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_018",
+      "duration_seconds": 4,
+      "environment": "nature",
+      "protagonist": "climber",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A climber in an orange helmet, blue shirt, and gray harness traverses a low granite wall using two handholds and two footholds. The camera slides parallel to the wall. Clothing, harness, and anatomy remain unchanged, and three limbs maintain stable contact whenever the fourth moves.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_019",
+      "duration_seconds": 5,
+      "environment": "desert",
+      "protagonist": "off-road truck",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A blue off-road truck with a white roof, four large tires, and a rear spare wheel crests one small sand dune and turns diagonally toward the camera. A low camera tracks from its left side. Body and wheels retain their geometry while the tires maintain believable contact with deforming sand.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_020",
+      "duration_seconds": 3,
+      "environment": "desert",
+      "protagonist": "camel",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A tan one-humped camel wearing a blue woven halter walks steadily across a sunlit desert. The camera circles clockwise about 45 degrees from profile to front three-quarter view. Its hump, halter, face, legs, and proportions remain unchanged, and the layered dunes preserve consistent depth.",
+      "consistency_focus": [
+        "subject_identity",
+        "camera_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_021",
+      "duration_seconds": 3,
+      "environment": "desert",
+      "protagonist": "woman",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A woman with braided dark hair, a white scarf, and a teal tunic takes three steps toward the camera while her right hand stays against a sandstone canyon wall. The camera retreats straight backward. Her face, clothes, and proportions remain unchanged; her hand follows the fixed rock surface without intersecting it.",
+      "consistency_focus": [
+        "subject_identity",
+        "surface_contact",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_022",
+      "duration_seconds": 4,
+      "environment": "desert",
+      "protagonist": "motorcyclist",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A motorcyclist in a white helmet and red suit on a black motorcycle follows one broad left curve across a salt-flat road. The camera tracks from inside the bend at wheel height. Rider and motorcycle retain their geometry, both tires stay on the road, and the lean changes continuously with the curve.",
+      "consistency_focus": [
+        "attached_object",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_023",
+      "duration_seconds": 5,
+      "environment": "desert",
+      "protagonist": "fennec fox",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A pale fennec fox with oversized ears and a black-tipped tail trots right to left over rippled sand and turns its head once without changing direction. A fixed ground-level camera shows its full body. Its ears, face, tail, proportions, and four-leg gait remain unchanged.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_024",
+      "duration_seconds": 4,
+      "environment": "desert",
+      "protagonist": "jeep",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A green open-top jeep with a black roll cage and rear spare wheel drives toward the camera, passes partly behind one foreground boulder, and emerges closer. A fixed camera pans with it. The jeep reappears with identical body, roll cage, wheels, and orientation along a continuous path.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "occlusion_reappearance",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_025",
+      "duration_seconds": 3,
+      "environment": "desert",
+      "protagonist": "runner",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A runner in a white top, blue shorts, and orange shoes follows one curved path across a desert basin, changing from profile to front three-quarter view. The camera tracks parallel at waist height. The runner's face, clothing, anatomy, and gait remain unchanged throughout the turn.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_026",
+      "duration_seconds": 5,
+      "environment": "desert",
+      "protagonist": "lizard",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A sandy-brown desert lizard with a striped tail scurries left to right across flat stone and climbs over one low rock. A ground-level camera tracks parallel. Its scales, four legs, tail, and proportions remain unchanged, with feet contacting the rock rather than passing through it.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_027",
+      "duration_seconds": 4,
+      "environment": "desert",
+      "protagonist": "horse rider",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A rider in a cream robe and brown hat on a black horse with a white blaze travels along a descending desert ridge. The camera tracks parallel from the left with both subjects full-body. The rider stays seated with hands on the reins, both subjects retain their appearance, and distant mesas show stable parallax.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_028",
+      "duration_seconds": 4,
+      "environment": "snow",
+      "protagonist": "skier",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A skier in a red jacket, black trousers, and white helmet descends toward the camera and completes one S-shaped pair of turns. The camera retreats from a front-left angle. The skier, two skis, and two poles remain unchanged; the skis contact the snow and the pine-tree layout stays stable.",
+      "consistency_focus": [
+        "articulated_motion",
+        "attached_object",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_029",
+      "duration_seconds": 5,
+      "environment": "snow",
+      "protagonist": "snowmobile",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A black snowmobile with a yellow windshield crosses a frozen plain and follows one curve around the camera. The camera pans to maintain a close three-quarter view. Its skis, track, seat, and windshield retain identical geometry, and its orientation changes continuously without sideways sliding.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "camera_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_030",
+      "duration_seconds": 3,
+      "environment": "snow",
+      "protagonist": "husky",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A gray-and-white husky with blue eyes and a red harness runs along a snowy path that bends toward the camera, changing from profile to frontal view. A fixed camera keeps the dog full-body. Its markings, harness, tail, proportions, and four-leg gait remain identical around the bend.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_031",
+      "duration_seconds": 3,
+      "environment": "snow",
+      "protagonist": "woman",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A woman in a mustard-yellow coat, red scarf, and black hat walks around the near edge of a transparent ice sculpture. A shoulder-high camera follows one meter behind. She is briefly hidden and reappears with the same face, clothing, and proportions; the sculpture's shape stays fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_032",
+      "duration_seconds": 4,
+      "environment": "snow",
+      "protagonist": "polar bear",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A polar bear with a small gray mark above its left foreleg walks left to right and steps from white snow onto one dark translucent ice patch. The camera tracks parallel. Its face, mark, fur volume, and proportions remain unchanged, and each paw maintains believable surface contact.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_033",
+      "duration_seconds": 5,
+      "environment": "snow",
+      "protagonist": "child on sled",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A child in a blue helmet and orange coat on a small red sled glides downhill toward the camera, passes on its left, and continues away. The camera pivots once to follow. Child, clothing, and sled retain identical appearance and geometry through the changing scale and front-to-rear view.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_034",
+      "duration_seconds": 4,
+      "environment": "snow",
+      "protagonist": "mountaineer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A mountaineer in a green parka, black backpack, and yellow crampons takes three deliberate steps up a steep snowy path. The camera rises parallel from the left. Clothing, backpack, anatomy, and crampons remain unchanged; each boot plants firmly and distant peaks keep stable geometry.",
+      "consistency_focus": [
+        "articulated_motion",
+        "surface_contact",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_035",
+      "duration_seconds": 3,
+      "environment": "snow",
+      "protagonist": "reindeer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A reindeer with symmetrical antlers, a dark brown neck, and a red collar trots diagonally across a clearing and briefly passes behind one birch trunk. A fixed camera observes from the side. It reappears at a three-quarter angle with the same antlers, collar, markings, proportions, and gait.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_036",
+      "duration_seconds": 5,
+      "environment": "snow",
+      "protagonist": "ice skater",
+      "prompt": "Photorealistic, single continuous shot, no cuts. An ice skater in a violet jacket, black trousers, and white skates glides across a frozen lake and completes one controlled half-turn. The camera makes a shallow arc at matching speed. The skater's face, clothes, anatomy, and skates remain unchanged, and the ice reflection rotates in synchrony.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_037",
+      "duration_seconds": 4,
+      "environment": "coast",
+      "protagonist": "surfer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A surfer in a black wetsuit carrying a turquoise board under the right arm takes four running steps through ankle-deep water and angles toward shore. A low camera tracks parallel from the left. Surfer and board retain their shape and relative position, and each footfall creates a localized splash.",
+      "consistency_focus": [
+        "attached_object",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_038",
+      "duration_seconds": 4,
+      "environment": "coast",
+      "protagonist": "sea turtle",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A green sea turtle with a hexagonal brown-and-gold shell pattern swims above a shallow coral reef and banks 45 degrees from top view toward side view. The camera tracks parallel. Its shell pattern, head, four flippers, and proportions remain unchanged while the reef geometry stays fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "viewpoint_change",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_039",
+      "duration_seconds": 5,
+      "environment": "coast",
+      "protagonist": "kayaker",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A kayaker in a yellow vest in a red kayak steers left around one gray rock using two alternating paddle strokes. The camera tracks parallel just above water level. Person, kayak, and double-ended paddle remain unchanged and connected, with the hull floating consistently.",
+      "consistency_focus": [
+        "articulated_motion",
+        "attached_object",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_040",
+      "duration_seconds": 3,
+      "environment": "coast",
+      "protagonist": "woman",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A barefoot woman with long dark hair, a white dress, and blue scarf walks along wet sand and makes one turn toward the water. The camera circles 45 degrees from her left side toward the front. Her face, dress, scarf, and anatomy stay consistent while hair and cloth move continuously in the wind.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "camera_motion"
+      ]
+    },
+    {
+      "id": "4d_041",
+      "duration_seconds": 3,
+      "environment": "coast",
+      "protagonist": "dog",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A golden retriever wearing a green collar runs through one shallow tidal pool and curves once toward the beach. A fixed camera pans right. Its face, collar, fur, tail, and proportions remain unchanged; its reflection follows accurately and each paw creates a matching splash.",
+      "consistency_focus": [
+        "subject_identity",
+        "surface_contact",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_042",
+      "duration_seconds": 4,
+      "environment": "coast",
+      "protagonist": "small sailboat",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A small white sailboat with one red triangular sail and two visible passengers moves across a sheltered harbor and changes heading once by about 30 degrees. The camera tracks from the quay. Hull, mast, sail, and passenger count remain unchanged, with coherent boat and building reflections.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "subject_identity",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_043",
+      "duration_seconds": 5,
+      "environment": "coast",
+      "protagonist": "seal",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A gray harbor seal with three dark spots on its left side crawls two body lengths across rocks, enters shallow water, and begins swimming. The camera tracks from its left side. The same spots, face, flippers, and body volume persist through the crawl-to-swim transition with plausible shoreline contact.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_044",
+      "duration_seconds": 4,
+      "environment": "coast",
+      "protagonist": "fisherman",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A fisherman in a red cap and green jacket carrying one long rod in the right hand walks toward and past the camera on a wooden pier. The camera pivots once to follow toward the pier's end. Person, clothing, rod length, hand grip, and proportions remain unchanged through the viewpoint reversal.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_045",
+      "duration_seconds": 3,
+      "environment": "coast",
+      "protagonist": "jet ski",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A rider in a white helmet on a blue-and-yellow jet ski moves left to right across a lagoon and completes one banked turn. A shoreline camera tracks parallel. Rider and jet ski retain their appearance and geometry, remain connected, and produce one continuous curved wake.",
+      "consistency_focus": [
+        "attached_object",
+        "rigid_geometry",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_046",
+      "duration_seconds": 5,
+      "environment": "rural",
+      "protagonist": "tractor",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A red tractor with a white roof and two large rear wheels drives along a farm track and makes one right turn through an open wooden gate. The camera tracks from the field edge. Its cab, four wheels, and proportions remain unchanged, and it passes between stationary gateposts without intersecting them.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_047",
+      "duration_seconds": 4,
+      "environment": "rural",
+      "protagonist": "farmer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A farmer in blue overalls, a straw hat, and red gloves walks toward the camera between corn rows, is partly hidden by leaves, and emerges into an open patch. The camera retreats straight backward. The farmer reappears with the same face, clothes, hat, gloves, and proportions; the rows keep stable depth.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_048",
+      "duration_seconds": 4,
+      "environment": "rural",
+      "protagonist": "sheepdog",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A black-and-white sheepdog with a blue collar runs across a grassy hillside and makes one tight U-turn around a marker stone. A fixed camera pans to keep it full-body. Its markings, collar, tail, proportions, and four-leg gait remain unchanged through the turn.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "camera_motion"
+      ]
+    },
+    {
+      "id": "4d_049",
+      "duration_seconds": 5,
+      "environment": "rural",
+      "protagonist": "horse",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A dark bay horse with a white forehead star and black legs gallops toward the camera, passes on its right, and continues in side profile. The camera stays fixed. Its marking, mane, limbs, proportions, and galloping rhythm remain unchanged through the scale and viewpoint change.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_050",
+      "duration_seconds": 3,
+      "environment": "rural",
+      "protagonist": "vintage pickup",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A pale-blue vintage pickup with a white roof and wooden side rails follows one left bend between orchard rows. A low camera follows from a rear three-quarter angle. The cab, open bed, rails, and four wheels retain identical geometry, and the tree rows remain spatially stable.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "camera_motion",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_051",
+      "duration_seconds": 3,
+      "environment": "rural",
+      "protagonist": "woman with bicycle",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A woman in a red cardigan and blue skirt pushing a cream bicycle with a front basket rounds one stone-wall corner on a hillside village path. A fixed waist-high camera watches from the outside of the corner. Woman, clothing, bicycle, basket, and hand position remain unchanged as they rotate into view.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_052",
+      "duration_seconds": 4,
+      "environment": "rural",
+      "protagonist": "goose",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A white goose with an orange bill and one gray wing patch takes six waddling steps across a farmyard from sunlight into barn shade. The camera tracks laterally at body height. Its bill, patch, body volume, and gait remain unchanged, with appearance varying only due to the lighting transition.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_053",
+      "duration_seconds": 5,
+      "environment": "rural",
+      "protagonist": "combine harvester",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A green combine harvester with a yellow cab roof and wide front header advances through wheat and completes one broad turn at the field edge. The camera holds a side-front view from the field boundary. Cab, header, four wheels, and proportions retain identical geometry while cut and standing crop remain spatially coherent.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_054",
+      "duration_seconds": 4,
+      "environment": "rural",
+      "protagonist": "child",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A child in a blue shirt, yellow shorts, and red shoes runs away along a path between sunflower rows and turns their head back once. The camera follows from behind at a fixed distance. Face, clothing, anatomy, and gait remain unchanged, and the repeated sunflowers keep stable positions.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_055",
+      "duration_seconds": 3,
+      "environment": "industrial",
+      "protagonist": "forklift",
+      "prompt": "Photorealistic, single continuous shot, no cuts. An orange forklift with four black wheels carrying one blue pallet at fork height drives forward and completes one 90-degree left turn at a warehouse aisle end. The camera tracks nearby from the front-right. Forklift, forks, wheels, and pallet retain their geometry, and the pallet stays fixed without sliding.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "attached_object",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_056",
+      "duration_seconds": 5,
+      "environment": "industrial",
+      "protagonist": "worker",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A worker in a yellow helmet, orange vest, and gray trousers walks along a metal catwalk and descends exactly three stairs. The camera tracks parallel from the side. Clothing, face, anatomy, and railing geometry remain unchanged, with each boot landing on a stair tread.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_057",
+      "duration_seconds": 4,
+      "environment": "industrial",
+      "protagonist": "train",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A blue-and-white commuter train with two front windows and a red destination panel enters a station toward the camera and continues past from frontal to side view. A fixed platform camera pans to follow the leading car. The nose, windows, panel, doors, and carriage alignment retain identical geometry.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "camera_motion",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_058",
+      "duration_seconds": 4,
+      "environment": "industrial",
+      "protagonist": "airport tug",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A yellow airport tug with a black cab frame and four wheels follows a painted line through one 90-degree curve across an airport apron. A low camera tracks from its outer side at fixed distance. Cab, chassis, and wheels retain identical geometry, and tire contact follows the painted curve without sideways sliding.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "camera_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_059",
+      "duration_seconds": 5,
+      "environment": "industrial",
+      "protagonist": "mechanic",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A mechanic in blue coveralls and a white helmet walks behind the circular front of a parked aircraft engine and reappears on the other side. The camera arcs slowly in the opposite direction. The mechanic reappears with the same face, clothing, helmet, and proportions while the engine geometry remains fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "camera_motion"
+      ]
+    },
+    {
+      "id": "4d_060",
+      "duration_seconds": 3,
+      "environment": "industrial",
+      "protagonist": "robotic inspection rover",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A small gray inspection rover with four wheels, one antenna, and a red status light drives up one shallow ramp in a dim utility tunnel. The camera follows just behind and to the left. Chassis, wheels, antenna, and light retain their geometry as the rover pitches upward, with stable low-light exposure.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "surface_contact",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_061",
+      "duration_seconds": 3,
+      "environment": "industrial",
+      "protagonist": "baggage cart",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A white airport tug pulling exactly three blue baggage carts crosses a service lane and follows one right-hand bend. A fixed low camera pans from left to right. Tug, three-cart count, couplings, and wheel geometry remain unchanged as every cart follows the same curved path.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "attached_object",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_062",
+      "duration_seconds": 4,
+      "environment": "industrial",
+      "protagonist": "warehouse robot",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A low orange warehouse robot with a square top and four inset wheels moves beneath shelving, rotates exactly 90 degrees at an aisle intersection, and continues toward the camera. A fixed camera views the intersection from waist height. Its square body, wheel count, color, and orientation remain coherent through the rotation and approach.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_063",
+      "duration_seconds": 5,
+      "environment": "industrial",
+      "protagonist": "dock worker",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A dock worker in a lime vest, blue helmet, and dark trousers walks along a container lane and passes behind one container corner before reappearing. The camera tracks parallel from across the lane. The worker's face, clothing, and proportions persist, and the stacked container edges remain straight and spatially stable.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "environment_consistency"
+      ]
+    },
+    {
+      "id": "4d_064",
+      "duration_seconds": 4,
+      "environment": "indoor",
+      "protagonist": "chef",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A chef in a white jacket and tall hat carrying one stainless-steel bowl in both hands walks around the right side of a restaurant kitchen island. A chest-high camera follows at fixed distance. Chef, hat, bowl, and hand positions remain unchanged, with coherent reflections on the bowl and metal counters.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_065",
+      "duration_seconds": 3,
+      "environment": "indoor",
+      "protagonist": "cat",
+      "prompt": "Photorealistic, single continuous shot, no cuts. An orange tabby cat with four white paws and a green collar makes one jump from the floor onto a low gray sofa and lands facing the camera. A fixed low camera keeps the full cat visible. Its stripes, four white paws, collar, tail, and proportions remain identical through takeoff and landing.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_066",
+      "duration_seconds": 5,
+      "environment": "indoor",
+      "protagonist": "dancer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A dancer in a fitted red top, black trousers, and white shoes crosses a mirrored studio and completes one full controlled spin. The camera tracks laterally at a fixed distance. Face, clothing, anatomy, and reflection remain unchanged and synchronized throughout the spin.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_067",
+      "duration_seconds": 4,
+      "environment": "indoor",
+      "protagonist": "office worker",
+      "prompt": "Photorealistic, single continuous shot, no cuts. An office worker in a navy blazer carrying a red shoulder bag walks away through a glass corridor, turns right around one corner, and briefly disappears. The camera follows two meters behind at shoulder height. The worker reappears with the same face, clothing, proportions, and bag, while reflections remain synchronized.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_068",
+      "duration_seconds": 4,
+      "environment": "indoor",
+      "protagonist": "museum visitor",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A museum visitor in a green coat and white hat walks behind one large bronze sculpture and reappears on its other side. The camera glides left while the visitor moves right. The visitor returns with the same face, coat, hat, and proportions, and the sculpture's geometry stays fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "camera_motion"
+      ]
+    },
+    {
+      "id": "4d_069",
+      "duration_seconds": 5,
+      "environment": "indoor",
+      "protagonist": "child with toy airplane",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A child in striped pajamas holding one red toy airplane in the raised right hand runs down a bright hallway and turns left through one doorway. A low camera follows from behind. Child, pajamas, airplane, hand grip, and body proportions remain unchanged through the turn and partial doorway occlusion.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_070",
+      "duration_seconds": 3,
+      "environment": "indoor",
+      "protagonist": "cleaning robot",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A circular white cleaning robot with a black sensor tower and blue light ring curves halfway around one marble column and emerges heading toward the camera. A fixed floor-level camera watches from the opposite side. Its circular body, sensor, and light ring retain identical geometry, with a coherent floor reflection before and after occlusion.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "occlusion_reappearance",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_071",
+      "duration_seconds": 3,
+      "environment": "indoor",
+      "protagonist": "waiter",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A waiter in a white shirt and black apron carrying a round tray with exactly three empty glasses walks around one dining table and turns toward the camera. A fixed chest-high camera pans slightly to follow. Waiter, tray, and three glasses retain their shapes and relative positions without sliding or multiplying.",
+      "consistency_focus": [
+        "articulated_motion",
+        "attached_object",
+        "rigid_geometry"
+      ]
+    },
+    {
+      "id": "4d_072",
+      "duration_seconds": 4,
+      "environment": "indoor",
+      "protagonist": "gymnast",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A gymnast in a blue leotard with a white diagonal stripe performs one cartwheel from left to right and finishes standing with both arms raised. The camera tracks sideways with the gymnast full-body. Face, leotard pattern, anatomy, and limb count remain unchanged through inversion and recovery, with correct hand and foot contact.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_073",
+      "duration_seconds": 5,
+      "environment": "night",
+      "protagonist": "motorcycle",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A rider in a silver helmet and red jacket on a black motorcycle follows one right turn through a neon-lit wet intersection. The camera tracks from outside the turn at wheel height. Rider and motorcycle retain their geometry, both tires stay grounded, and colored reflections move coherently across wet asphalt.",
+      "consistency_focus": [
+        "attached_object",
+        "surface_contact",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_074",
+      "duration_seconds": 4,
+      "environment": "night",
+      "protagonist": "pedestrian",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A pedestrian with short brown hair, a light gray jacket, and a yellow backpack walks toward the camera beneath three separate pools of streetlight. The camera retreats straight backward at chest height. Face, clothing, backpack, and proportions remain unchanged, with brightness changing smoothly only under each lamp.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_075",
+      "duration_seconds": 3,
+      "environment": "night",
+      "protagonist": "owl",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A barn owl with a white heart-shaped face and tan wings flies left to right across a moonlit clearing and banks around one tree trunk. A fixed camera pans right. Face, two wings, markings, and body proportions remain unchanged through the partial occlusion and bank.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_076",
+      "duration_seconds": 5,
+      "environment": "night",
+      "protagonist": "car",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A dark blue sedan with silver trim, four doors, and white headlights travels through a tunnel and changes from frontal three-quarter to side view under four ceiling lights. The camera tracks parallel from the left. Body, doors, wheels, trim, and reflections retain coherent geometry while illumination changes periodically.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_077",
+      "duration_seconds": 4,
+      "environment": "night",
+      "protagonist": "fox",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A red fox with black lower legs and a white-tipped tail trots along a dim suburban street, crosses one pool of streetlight, and turns into a garden entrance. The camera follows from behind and to the side. Its face, markings, tail, proportions, and gait remain unchanged across the lighting transition and turn.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_078",
+      "duration_seconds": 4,
+      "environment": "night",
+      "protagonist": "cyclist",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A cyclist in a white helmet and teal jacket on a red bicycle rides around one bench and crosses from warm lamplight into cool ambient light. A camera tracks parallel from the right. Rider, frame, two wheels, and clothing remain unchanged, with lighting shifting smoothly across the same surfaces.",
+      "consistency_focus": [
+        "attached_object",
+        "viewpoint_change",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_079",
+      "duration_seconds": 5,
+      "environment": "night",
+      "protagonist": "security guard",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A security guard in a navy uniform and yellow reflective vest walks halfway around a concrete pillar, disappears, and reappears on the other side. The camera moves around the pillar in the opposite direction. The guard returns with the same face, uniform, vest, and proportions while pillar and parking lines remain fixed.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "camera_motion"
+      ]
+    },
+    {
+      "id": "4d_080",
+      "duration_seconds": 3,
+      "environment": "night",
+      "protagonist": "tram",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A red articulated tram with two connected sections and lit rectangular windows completes one left turn across wet rails at a rainy intersection. A fixed street-level camera pans from front to side view. Both sections, joint, windows, and wheel alignment retain their geometry, with coherent reflections on rails and pavement.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_081",
+      "duration_seconds": 3,
+      "environment": "night",
+      "protagonist": "runner",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A runner in a blue jacket, black leggings, and orange shoes runs through one stone archway from a dark street into a brighter square. The camera follows directly behind at fixed distance. Clothing, anatomy, and gait remain unchanged through the brief occlusion, and exposure changes smoothly without altering colors.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_082",
+      "duration_seconds": 4,
+      "environment": "fantasy",
+      "protagonist": "armored knight",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A knight in silver plate armor with a blue plume and red round shield walks around one weathered statue and approaches the camera. The camera retreats straight backward at waist height. Armor plates, plume, shield, limb count, and proportions remain unchanged through the partial occlusion and turn.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_083",
+      "duration_seconds": 5,
+      "environment": "fantasy",
+      "protagonist": "giant tortoise",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A giant moss-covered tortoise with a cracked brown shell and two ivory horns takes four slow steps beneath one broken temple arch. The camera tracks parallel at shell height. Shell cracks, moss patches, horns, head, and four legs remain unchanged, and the arch preserves a stable sense of scale.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_084",
+      "duration_seconds": 4,
+      "environment": "fantasy",
+      "protagonist": "explorer",
+      "prompt": "Photorealistic, single continuous shot, no cuts. An explorer in a brown coat with a yellow backpack and silver lantern steps over one low rock inside a luminous crystal cave. The camera arcs 90 degrees from behind to the explorer's left side. Face, clothing, backpack, lantern, and proportions remain unchanged while colored illumination stays attached to stable crystal surfaces.",
+      "consistency_focus": [
+        "subject_identity",
+        "camera_motion",
+        "lighting_consistency"
+      ]
+    },
+    {
+      "id": "4d_085",
+      "duration_seconds": 3,
+      "environment": "fantasy",
+      "protagonist": "mechanical horse",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A brass mechanical horse with four jointed steel legs and a blue saddle trots three steps through a steam-filled courtyard and turns its head toward the camera. A fixed low camera shows the full body. Head, saddle, torso, four legs, and visible joints retain their geometry and articulate in a repeatable rhythm.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "articulated_motion",
+        "subject_identity"
+      ]
+    },
+    {
+      "id": "4d_086",
+      "duration_seconds": 5,
+      "environment": "fantasy",
+      "protagonist": "small dragon",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A small green dragon with two orange wings, four legs, and a white tail tip runs along a castle roof and makes one short jump across a narrow gap. The camera tracks parallel from its left. Color pattern, two wings, four legs, tail, and proportions remain unchanged, with feet leaving and contacting the correct roof edges.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_087",
+      "duration_seconds": 4,
+      "environment": "fantasy",
+      "protagonist": "robed traveler",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A traveler in a purple robe with a gold belt and square brown satchel walks around one broken pillar on a suspended stone bridge. The camera follows two meters behind. Face, robe, belt, satchel, and proportions remain unchanged through partial occlusion, while bridge edges maintain stable depth.",
+      "consistency_focus": [
+        "subject_identity",
+        "occlusion_reappearance",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_088",
+      "duration_seconds": 4,
+      "environment": "fantasy",
+      "protagonist": "lion-like creature",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A lion-like creature with white fur, a blue mane, two short horns, and a striped tail walks around one glowing tree and turns its head toward the camera. The camera arcs in the opposite direction at body height. Mane, horns, markings, face, four legs, and proportions remain unchanged through the changing viewpoint.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "camera_motion"
+      ]
+    },
+    {
+      "id": "4d_089",
+      "duration_seconds": 5,
+      "environment": "fantasy",
+      "protagonist": "ancient automaton",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A bronze humanoid automaton with one circular blue chest light and segmented limbs descends exactly two broad stone steps and turns to face the camera. A fixed waist-high camera keeps it full-body. Head, chest light, limb count, joints, and bronze panels retain identical geometry, with each foot landing on a step.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_090",
+      "duration_seconds": 3,
+      "environment": "fantasy",
+      "protagonist": "masked rider",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A rider in a black cloak and silver mask on a dark horse with a white left foreleg follows one curved path around a standing stone on a windswept plateau. A fixed camera pans to maintain a side three-quarter view. Rider, mask, cloak, reins, horse markings, and relative positions remain unchanged through the turn.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_091",
+      "duration_seconds": 3,
+      "environment": "sci-fi",
+      "protagonist": "astronaut",
+      "prompt": "Photorealistic, single continuous shot, no cuts. An astronaut in a white suit with a blue chest panel and red life-support backpack takes two low-gravity steps down from a lunar ridge and turns toward the camera. A camera tracks sideways at waist height. Helmet, suit, panels, backpack, anatomy, and proportions remain unchanged, with boots contacting the rocky surface.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_092",
+      "duration_seconds": 4,
+      "environment": "sci-fi",
+      "protagonist": "hover bike",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A silver hover bike with two blue thrusters carrying a rider in an orange helmet banks through one curve on an elevated lane between futuristic towers. The camera follows closely from the left side. Bike, two thrusters, rider, and relative positions retain their geometry while near and distant buildings show coherent parallax.",
+      "consistency_focus": [
+        "attached_object",
+        "rigid_geometry",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_093",
+      "duration_seconds": 5,
+      "environment": "sci-fi",
+      "protagonist": "service android",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A white humanoid android with black joints and a circular green chest light walks through one circular doorway, turns left, and continues toward the camera. A fixed camera watches from beyond the doorway. Head, two arms, two legs, joint colors, and chest light remain unchanged through occlusion and viewpoint change.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "occlusion_reappearance",
+        "viewpoint_change"
+      ]
+    },
+    {
+      "id": "4d_094",
+      "duration_seconds": 4,
+      "environment": "sci-fi",
+      "protagonist": "mars rover",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A compact white rover with six black wheels, a mast camera, and blue side panels climbs one shallow rocky ridge and rotates 30 degrees onto a new path. The camera tracks parallel from the left. Chassis, six wheels, mast, and panels retain their geometry, and every wheel follows the terrain without sinking or detaching.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_095",
+      "duration_seconds": 3,
+      "environment": "sci-fi",
+      "protagonist": "woman in exosuit",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A woman with short curly hair wearing a white exosuit with blue knee joints walks between greenhouse plant rows and makes one right turn toward the camera. A fixed chest-high camera pans slightly to follow. Face, hair, suit panels, joint locations, anatomy, and proportions remain unchanged through leaf occlusion and the turn.",
+      "consistency_focus": [
+        "subject_identity",
+        "attached_object",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_096",
+      "duration_seconds": 5,
+      "environment": "sci-fi",
+      "protagonist": "drone",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A compact orange inspection drone with four enclosed rotors and one green front light flies beneath one hangar support beam, descends one meter, and banks toward the camera. The camera tracks from its right side. Body, four rotors, front light, and orientation remain coherent through the 3D path and partial beam occlusion.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "occlusion_reappearance",
+        "depth_consistency"
+      ]
+    },
+    {
+      "id": "4d_097",
+      "duration_seconds": 4,
+      "environment": "sci-fi",
+      "protagonist": "six-legged robot",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A matte-black robot with six silver legs and a rectangular yellow chassis walks across a metallic bridge, places its front legs over one raised seam, and turns 30 degrees. The camera tracks parallel at chassis height. Exactly six legs, their attachment points, chassis shape, and stepping order remain consistent, with each foot contacting the bridge.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "articulated_motion",
+        "surface_contact"
+      ]
+    },
+    {
+      "id": "4d_098",
+      "duration_seconds": 4,
+      "environment": "sci-fi",
+      "protagonist": "futuristic car",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A sleek white autonomous car with a black glass roof and four covered wheels follows one sweeping curve inside a transparent tunnel, changing from frontal to side profile. A fixed camera pans to follow. Body, roof, wheel covers, and proportions retain identical geometry, with coherent reflections and stable tunnel ribs.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "viewpoint_change",
+        "reflection_consistency"
+      ]
+    },
+    {
+      "id": "4d_099",
+      "duration_seconds": 5,
+      "environment": "sci-fi",
+      "protagonist": "spacesuit technician",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A technician in a gray spacesuit with a yellow helmet stripe and square backpack walks forward, ducks once beneath a low beam, and returns upright. A camera tracks backward from the front. Faceplate, stripe, backpack, limb count, and proportions remain unchanged through the pose deformation and partial occlusion.",
+      "consistency_focus": [
+        "subject_identity",
+        "articulated_motion",
+        "occlusion_reappearance"
+      ]
+    },
+    {
+      "id": "4d_100",
+      "duration_seconds": 3,
+      "environment": "sci-fi",
+      "protagonist": "cargo mech",
+      "prompt": "Photorealistic, single continuous shot, no cuts. A compact blue cargo mech with two legs, two arms, and a rectangular orange crate held at chest height takes three steps and pivots left around one outpost corner. The camera follows from a rear three-quarter view. Mech, limb count, crate geometry, grip points, and relative positions remain unchanged through the articulated turn.",
+      "consistency_focus": [
+        "rigid_geometry",
+        "attached_object",
+        "articulated_motion"
+      ]
+    }
+  ]
+}
