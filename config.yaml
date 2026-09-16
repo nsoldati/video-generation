@@ -1,11 +1,11 @@
 # Models run sequentially in this order. Toggle enabled to select them.
 models:
   - config: configs/wan.yaml
-    enabled: true
+    enabled: false
   - config: configs/hunyuan_video.yaml
     enabled: false
   - config: configs/cogvideox.yaml
-    enabled: false
+    enabled: true
   - config: configs/ltx_video.yaml
     enabled: false
   - config: configs/ltx2.yaml

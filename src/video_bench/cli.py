@@ -23,6 +23,10 @@ def build_parser() -> argparse.ArgumentParser:
         help="High-level YAML configuration (default: config.yaml)",
     )
     parser.add_argument("--prompts", help="Override the configured JSON prompt dataset")
+    parser.add_argument(
+        "--prompt-count", type=int,
+        help="Override prompts.count (useful for small validation runs)",
+    )
     parser.add_argument("--seeds", nargs="+", type=int, help="Override the configured seeds")
     parser.add_argument("--output-dir", help="Override output.root_dir")
     parser.add_argument("--overwrite", action="store_true", help="Regenerate existing MP4 files")
@@ -56,13 +60,16 @@ def main(argv: Sequence[str] | None = None) -> None:
         suite = load_suite_config(args.config)
         prompt_path = Path(args.prompts).expanduser().resolve() if args.prompts else suite.prompts.path
         prompts = load_prompts(prompt_path)
-        if suite.prompts.count is not None:
-            if suite.prompts.count > len(prompts):
+        prompt_count = args.prompt_count if args.prompt_count is not None else suite.prompts.count
+        if prompt_count is not None:
+            if prompt_count <= 0:
+                raise ConfigError("--prompt-count must be a positive integer")
+            if prompt_count > len(prompts):
                 raise ConfigError(
-                    f"prompts.count is {suite.prompts.count}, but {prompt_path} contains "
+                    f"prompt count is {prompt_count}, but {prompt_path} contains "
                     f"only {len(prompts)} prompts"
                 )
-            prompts = prompts[:suite.prompts.count]
+            prompts = prompts[:prompt_count]
         seeds = args.seeds if args.seeds is not None else suite.seeds.values()
         output_root = (
             Path(args.output_dir).expanduser().resolve()

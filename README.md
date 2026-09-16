@@ -44,6 +44,9 @@ Set the prompt file, seeds, output directory, and enabled models in
 uv run ./generate.py --dry-run
 ```
 
+Use `--prompt-count 1` to run a single-prompt smoke test without changing the
+configured 100-prompt suite.
+
 Run on one GPU:
 
 ```bash

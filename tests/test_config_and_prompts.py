@@ -47,11 +47,11 @@ def test_unknown_config_key_is_rejected(tmp_path):
 def test_default_suite_selects_models_prompts_seeds_and_outputs():
     suite = load_suite_config("config.yaml")
 
-    assert [path.name for path in suite.models] == ["wan.yaml"]
-    assert suite.prompts.path.name == "prompts.josn"
-    assert suite.prompts.count == 10
-    assert suite.seeds.values() == [0, 1, 2]
-    assert suite.output.root_dir.name == "output"
+    assert [path.name for path in suite.models] == ["cogvideox.yaml"]
+    assert suite.prompts.path.name == "prompts.json"
+    assert suite.prompts.count is None
+    assert suite.seeds.values() == [0]
+    assert suite.output.root_dir.name == "generated-videos"
     assert suite.output.videos_path == suite.output.root_dir / "videos"
     assert suite.output.manifest_path == suite.output.root_dir / "manifest.csv"
     assert suite.runtime.load_to_vram is True
